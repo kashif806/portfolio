@@ -1,0 +1,735 @@
+body, html {
+    margin : 0;
+    padding : 0;
+    color: whitesmoke;      
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+
+}
+
+video {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    object-fit: fill;
+  }
+
+  .overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .landingPage {
+      width: 100%;
+      height:100%;
+      /* background-color: rgba(0,0,0,0.8); */
+      /* overflow: hidden; */
+    
+  }
+  
+  .section {
+    width: 100%;
+  }
+
+    .content-centered {
+
+        display: flex;
+        
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    
+    }
+
+
+
+  
+    h1 {
+
+        font-size:4.5rem;
+        font-weight: 100;
+        margin: 2%;
+    }
+
+    h3 {
+        font-size : 1.5rem;
+        font-weight: 100;    
+    }
+
+    #buttonContainer {
+        margin : 4%;
+        display: flex;
+        width: 250px;
+        flex-direction: row;
+        justify-content: space-between;
+        /* flex-wrap: wrap; */
+
+    }
+
+    button {
+        
+        background: none;
+        color: whitesmoke;      
+        font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+          border-radius:2em;
+        box-sizing: border-box;
+        transition: all 1s;	    
+    }
+
+    .landingPage button {
+
+      height: 40px;
+      width: 100px;
+
+    }
+
+    .landingPage button:hover {
+        width: 500px;
+        /* height: 100px; */
+        border-color: rgb(255, 136, 0);
+        
+    }
+
+    /* **************************Arrow *******************************/
+
+
+
+  #arrow {
+    /* background-color: blue; */
+    position: absolute;
+    top : 80%;
+    width: 24px;
+    height: 24px;
+    display: none;
+
+   }
+
+
+  .chevron {
+    position: relative;
+    width: 28px;
+    height: 8px;
+    opacity: 0;
+    transform: scale3d(0.5, 0.5, 0.5);
+    animation: move 3s ease-out infinite;
+  }
+  
+  .chevron:first-child {
+    animation: move 3s ease-out 1s infinite;
+  }
+  
+  .chevron:nth-child(2) {
+    animation: move 3s ease-out 2s infinite;
+  }
+  
+  .chevron:before,
+  .chevron:after {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 51%;
+    background: rgb(255, 136, 0);
+  }
+  
+  .chevron:before {
+    left: 0;
+    transform: skew(0deg, 30deg);
+  }
+  
+  .chevron:after {
+    right: 0;
+    width: 50%;
+    transform: skew(0deg, -30deg);
+  }
+  
+  @keyframes move {
+    25% {
+      opacity: 1;
+  
+    }
+    33% {
+      opacity: 1;
+      transform: translateY(60px);
+    }
+    67% {
+      opacity: 1;
+      transform: translateY(80px);
+    }
+    100% {
+      opacity: 0;
+      transform: translateY(55px) scale3d(0.5, 0.5, 0.5);
+    }
+  }
+  
+  .text {
+    display: block;
+    margin-top: 75px;
+    margin-left: -30px;
+    font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+    font-size: 12px;
+    color: #fff;
+    text-transform: uppercase;
+    white-space: nowrap;
+    opacity: .25;
+    animation: pulse 2s linear alternate infinite;
+  }
+  
+  @keyframes pulse {
+    to {
+      opacity: 1;
+    }
+  }
+
+
+/* ****************************************************************************** */
+   
+/* ************************* Seperator *********************** */
+.seperator {
+  margin:0;
+  position: relative;
+  height: 100px;
+  width: 100%;
+  background:  rgba(0,0,0,0.5);
+
+  
+
+}
+
+
+.seperator h1 {
+  margin:0;
+  padding:0;
+  font-size: 2rem;
+  font-weight: 100;
+  color: whitesmoke;
+  z-index: 1;
+
+}
+.seperator h3 {
+  margin:0;
+  font-size : 1rem;
+  color:grey;
+  z-index:1;
+}
+
+
+/* ******************Skills Page ***************************** */
+
+.boxContainer {
+  /* background-color: blue;   */
+  margin-top: 5%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+
+
+/* ************************** End Flip Box ******************* */
+
+
+.full-size, .flip-box .object, .flip-box .front, .flip-box .back {
+  width: 100%;
+  height: 100%;
+}
+
+.slice, .flip-box .front, .flip-box .back, .flip-box .flank {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+}
+
+.flip-box {
+  float: left;
+  display: block;
+  /* position: relative; */
+  z-index: 2;
+  width: 180px;
+  height: 300px;
+  /* min-width: 150px;
+  min-height: 250px; */
+  -webkit-perspective: 400px;
+  -moz-perspective: 400px;
+  -ms-perspective: 400px;
+  -o-perspective: 400px;
+  perspective: 400px;
+  margin: 2%;
+}
+.flip-box .object {
+  position: absolute;
+  animation-fill-mode: forwards;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -ms-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  -webkit-transform: translateZ(-75px);
+  -moz-transform: translateZ(-75px);
+  -ms-transform: translateZ(-75px);
+  -o-transform: translateZ(-75px);
+  transform: translateZ(-75px);
+}
+.flip-box .object:hover, .flip-box .object:focus {
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.2s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 1.5s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+  -webkit-transform: translateZ(-75px) rotateY(180deg);
+  -moz-transform: translateZ(-75px) rotateY(180deg);
+  -ms-transform: translateZ(-75px) rotateY(180deg);
+  -o-transform: translateZ(-75px) rotateY(180deg);
+  transform: translateZ(-75px) rotateY(180deg);
+  
+}
+.flip-box .front {
+  z-index: 1;
+  /* background-color: #789e13; */
+  /* background-color: rgb(71, 108, 163); */
+  /* background-color: rgb(0, 0, 0,0.7)#001f3f; */
+  /* background-color: #001f3f;
+  */
+  /* background-image: url("cardsBg.jpg"); */
+  /* background-color: #272727; */
+  
+  background-color: rgba(0,0,0,0.8);
+  border: 2px solid blue;
+  border-radius: 5%;
+  -webkit-transform: rotateY(0deg) translateZ(75px);
+  -moz-transform: rotateY(0deg) translateZ(75px);
+  -ms-transform: rotateY(0deg) translateZ(75px);
+  -o-transform: rotateY(0deg) translateZ(75px);
+  transform: rotateY(0deg) translateZ(75px);
+  /* border: 2px #272727 ridge;  */
+}
+.flip-box .back {
+  z-index: 0;
+  background-color: black;
+  border: 2px solid goldenrod;
+   border-radius: 5%;
+  -webkit-transform: rotateY(180deg) translateZ(75px);
+  -moz-transform: rotateY(180deg) translateZ(75px);
+  -ms-transform: rotateY(180deg) translateZ(75px);
+  -o-transform: rotateY(180deg) translateZ(75px);
+  transform: rotateY(180deg) translateZ(75px);
+  /* border: 2px #272727 ridge; */
+}
+.flip-box .flank {
+  width: 150px;
+  height: 200px;
+  left: 75px;
+  /* background-color: #55700e; */
+  background-color: transparent;
+  -webkit-transform: rotateY(-90deg) translateZ(150px);
+  -moz-transform: rotateY(-90deg) translateZ(150px);
+  -ms-transform: rotateY(-90deg) translateZ(150px);
+  -o-transform: rotateY(-90deg) translateZ(150px);
+  transform: rotateY(-90deg) translateZ(150px);
+}
+.flip-box.flip-up .object:hover, .flip-box.flip-up .object:focus {
+  -webkit-transform: translateZ(-75px) rotateX(180deg);
+  -moz-transform: translateZ(-75px) rotateX(180deg);
+  -ms-transform: translateZ(-75px) rotateX(180deg);
+  -o-transform: translateZ(-75px) rotateX(180deg);
+  transform: translateZ(-75px) rotateX(180deg);
+}
+.flip-box.flip-up .back {
+  -webkit-transform: rotateX(180deg) translateZ(75px);
+  -moz-transform: rotateX(180deg) translateZ(75px);
+  -ms-transform: rotateX(180deg) translateZ(75px);
+  -o-transform: rotateX(180deg) translateZ(75px);
+  transform: rotateX(180deg) translateZ(75px);
+}
+.flip-box.flip-up .flank {
+  width: 300px;
+  height: 150px;
+  left: 0;
+  top: 25px;
+  -webkit-transform: rotateX(-90deg) translateZ(100px);
+  -moz-transform: rotateX(-90deg) translateZ(100px);
+  -ms-transform: rotateX(-90deg) translateZ(100px);
+  -o-transform: rotateX(-90deg) translateZ(100px);
+  transform: rotateX(-90deg) translateZ(100px);
+}
+.flip-box.alternative .front {
+  /* background-color: rgba(256,256,256, 0.5); */
+  /* background-color: rgb(5, 125, 159,0.7); */
+  /* background-color: rgb (0,0,0,0.7); */
+  /* background-color: #C2b9B0; */
+  background-color: rgba(0,0,0,.8);
+  border: 2px solid green;
+  border-radius: 5%;
+
+  
+    
+}
+
+.flip-box.third .front {
+  background-color: rgba(0,0,0,.8);
+  border: 2px solid yellow;
+  border-radius: 5%;
+}
+
+.flip-box.fourth .front {
+  background-color: rgba(0,0,0,.8);
+  border: 2px solid blueviolet;
+  border-radius: 5%;
+  }
+
+  .flip-box.fifth .front {
+    background-color: rgba(0,0,0,.8);
+    border: 2px solid red;
+    border-radius: 5%;
+
+    } 
+
+
+.flip-box.alternative .back {
+  /* background-color: #bd27a9; */
+  /* background-color: black; */
+}
+.flip-box.alternative .flank {
+  /* background-color: #69155d; */
+  /* background-color: transparent; */
+}
+
+.no-csstransforms3d .flip-box .object {
+  position: relative;
+  overflow: hidden;
+  -webkit-transform-style: none;
+  -moz-transform-style: none;
+  -ms-transform-style: none;
+  -o-transform-style: none;
+  transform-style: none;
+}
+.no-csstransforms3d .flip-box .object .back {
+  top: 300px;
+  z-index: 0;
+  -webkit-transition-property: top;
+  -moz-transition-property: top;
+  -o-transition-property: top;
+  transition-property: top;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-in-out;
+  -moz-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+.no-csstransforms3d .flip-box .object:hover .back {
+  top: 0;
+  z-index: 1;
+}
+.no-csstransforms3d .flip-box .flank {
+  display: none;
+}
+
+/* Internet Explorer 10 only */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .object {
+    position: relative;
+    overflow: hidden;
+    transform: none !important;
+  }
+  .object .back {
+    top: 300px;
+    z-index: 0;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-in-out;
+    -moz-transition-timing-function: ease-in-out;
+    -o-transition-timing-function: ease-in-out;
+    transition-timing-function: ease-in-out;
+  }
+  .object:hover .back {
+    top: 0;
+    z-index: 1;
+    transform: rotateY(0deg) translateZ(0);
+  }
+}
+
+/* ************************** End Flip Box ******************* */
+
+/* ********************* Project Box ********************** */
+
+.projectBox {
+  width: 150px;
+  text-align: center;
+  height: 150px;
+  background-image:  linear-gradient(90deg, rgba(0,0,0,0.76234243697479) 0%, rgba(0,0,0,1) 50%, rgba(232,71,13,0.8300362381280637) 50%, rgba(232,152,13,0.8356384790244222) 100%);
+  z-index:1;
+  border-radius: 10%;
+  margin: 20px;
+  background-size: 200% 100%;
+  /* background-position: -100%; */
+  transition: all 1s;
+}
+
+/* link for sliding background ...   */
+/* https://www.kirupa.com/html5/sliding_background_effect_on_link_hover.htm
+ */
+
+
+.projectBox:hover {
+
+  background-position: -100%;
+  color: black
+
+}
+
+.projectDetails{
+
+  margin: auto;
+  background-size: 100% 200%;
+  transition: all 1s;
+  width:    70%;
+  min-height: 350px;
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
+  /* background-image: linear-gradient(0deg,rgba(232,71,13,0.8300362381280637) 0%, rgba(232,152,13,0.8356384790244222) 100%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%); */
+  margin : 1%;
+  border-radius: 5%;
+  padding: 1%;
+ /* border : 2px ridge green; */
+}
+
+
+/* *********************Project 1 ************************/
+
+#project1 {
+  border: 2px ridge blue;
+  transition: all 1s;
+  
+}
+#project1:hover {
+  border: 2px ridge black;
+  }
+
+#project1:hover ~ .projectDetails{
+  
+    background-position: -100% 100%;
+   border : 2px orange ridge;
+ }
+  
+#show1 {
+  display: none;
+}
+ 
+#project1:hover ~ .projectDetails #show1{
+  
+   display: block;
+  
+}
+
+
+
+/* *********************Project 2 ************************/
+
+#project2 {
+  border: 2px ridge yellow;
+}
+#project2:hover {
+  border: 2px ridge black;
+  }  
+  
+
+#project2:hover {
+  border: 2px ridge black;
+  }
+
+#project2:hover ~ .projectDetails{
+  
+  background-position: -100% 100%;
+  border : 2px orange ridge;
+ }
+  
+#show2 {
+  display: none;
+}
+ 
+#project2:hover ~ .projectDetails #show2{
+  
+   display: block ;
+  
+}
+
+/* *********************Project 3 ************************/
+
+
+
+  
+#project3 {
+  border: 2px ridge blueviolet;
+ }
+
+ #project3:hover {
+  border: 2px ridge black;
+  }
+
+  #project3:hover {
+    border: 2px ridge black;
+    }
+  
+  #project3:hover ~ .projectDetails{
+    
+    background-position: -100% 100%;
+    border : 2px orange ridge;
+   }
+    
+  #show3 {
+    display: none;
+  }
+   
+  #project3:hover ~ .projectDetails #show3{
+    
+     display: block ;
+    
+  }  
+ 
+ /* *********************Project 3 ************************/ 
+
+
+#project4 {
+  border: 2px ridge red;
+ }
+
+ #project4:hover {
+  border: 2px ridge black;
+  }
+
+  
+  #project4:hover ~ .projectDetails{
+    
+    background-position: -100% 100%;
+    border : 2px orange ridge;
+   }
+    
+  #show4 {
+    display: none;
+  }
+   
+  #project4:hover ~ .projectDetails #show4{
+    
+     display: block ;
+    
+  }  
+
+
+
+  .projectBox button {
+    color: black;
+    font-weight: bolder;
+    border-color: black;
+  }
+  
+  .projectBox button:hover {
+    border-color: white;
+    background-color: white;
+  }
+  
+  
+  .highlight {
+    color: rgb(255, 136, 0);
+   
+  }
+
+  #contactForm {
+
+    /* background-color: black; */
+    margin: 5%;
+
+  }
+
+  #formElements {
+    margin :  5%;
+    padding: 5%;
+    display :grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: repeat(3, 1fr) 4fr 2fr;
+    row-gap: 20px;
+    column-gap: 20px;
+    overflow: hidden;
+    
+    
+  }
+
+  #formElements:hover {
+    background-color: rgba(0,0,0,.8);
+  }
+  label {
+    font-size: 1.5rem;
+    align-self: center;
+  }
+
+  input, textarea {
+    font-size: 1.2rem;
+    padding: 5px;
+    /* text-align: center; */
+    Background: none;
+    border-color: transparent;
+    border-bottom-color: gray;
+    color: White;
+    
+  }
+
+  
+
+
+  textarea:focus, input:focus {
+    outline: none;
+    /* background-color: black;
+    border: 1px solid goldenrod;     */
+  }
+
+  input[type=submit] {
+    /* background-color: #4CAF50; */
+    background-color:transparent;
+    border-color: rgb(255, 136, 0);
+    color: white;
+    /* border: none; */
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    height: 50px;
+    justify-self: end; 
+    transition: all 1s; 
+  }
+
+  input[type=submit]:hover {
+    color: black;
+    background-color: rgb(255, 136, 0);
+  }
+
+
+  
+
+  
