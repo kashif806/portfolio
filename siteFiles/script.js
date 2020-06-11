@@ -1,4 +1,3 @@
-
 let nameBlock = document.getElementById("nameBlock");
 let overlay = document.getElementsByClassName("overlay")[0];
 let name = document.querySelector("#nameDiv h1");
@@ -20,64 +19,8 @@ console.log (randomColour());
 
 AOS.init ();
 
-// function mouseOver(){
-//     overlay.style.background = "rgba(0,0,0,0.7)";
-   
-// }
-
-// function mouseOut(){
-//     overlay.style.background = "rgba(0,0,0,.5)";
-
-// }
 
 
-
-
-
-// function whichTransitionEvent(){
-//     var t,
-//         el = document.createElement("fakeelement");
-  
-//     var transitions = {
-//       "transition"      : "transitionend",
-//       "OTransition"     : "oTransitionEnd",
-//       "MozTransition"   : "transitionend",
-//       "WebkitTransition": "webkitTransitionEnd"
-//     }
-  
-//     for (t in transitions){
-//       if (el.style[t] !== undefined){
-//         return transitions[t];
-//       }
-//     }
-//   }
-  
-//   var transitionEvent = whichTransitionEvent();
-  
-//   $("#infoBtn").hover(function(){
-    
-//     $(this).one(transitionEvent,
-//                 function(event) {
-//                     console.log(event)
-//       // Do something when the transition ends
-//       $("#infoBtn").text("Scroll Down");
-//     });
-//   });
-
-
-
-
-
-// function closeModal (){
-//     infoModal.hide;
-// }
-
-// nameBlock.addEventListener("mouseover", mouseOver);
-// nameBlock.addEventListener("mouseout", mouseOut);
-// // infoModalClose.addEventListener("click",closeModal);
-
-
-// Some Jquery
 $(document).ready(function(){
     $( "#infoBtn" ).hover(
         function(e) {
@@ -89,4 +32,21 @@ $(document).ready(function(){
             $("#arrow").hide();
         }
     );
+    
+    $("#tagLine").hover((e)=>{
+        $("#tagLine").text("A Front End Developer .... Moving towards full stack")
+    },(e)=>{
+        $("#tagLine").text("A Front End Developer ....");
+    });
+
+    $("#contactBtn").hover((e)=>{
+        $(".socialIcons").css('transform','translateX(0)');
+    },(e)=>{
+        console.log("going back")
+        $("#linkedin").css('transform','translateX(-90px)');
+        $("#email").css('transform','translateX(-200px)');
+        $("#call").css('transform','translateX(-160px)');
+
+    });
+
 });
