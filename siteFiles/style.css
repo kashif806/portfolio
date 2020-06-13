@@ -27,12 +27,12 @@ video {
     top: 40%;
     left: 0;
     z-index:1;
-    
   }
 
   #social:hover {
     z-index:3;
   }
+  
   .socialIcons {
     /* background-color: blue; */
     background-color: transparent;
@@ -80,7 +80,7 @@ video {
 
   .socialIcons:hover {
     background-color: black !important;
-    transform: translateX(0) !important;
+    transform: translateX(-3px) !important;
     /* color: black; */
     font-weight: bold;
   }
@@ -544,7 +544,41 @@ video {
   }
 }
 
+/* .flip-content {
+  white-space: nowrap;
+} */
+.star {
+  color:gold;
+  /* font-size: small; */
+  
+}
+
+
 /* ************************** End Flip Box ******************* */
+#pipeline {
+  flex-direction: row;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+#pipelineSkills{
+  z-index:-1;
+  font-weight: bolder;
+  transform: translateX(-460px);
+  transition: all ease-in 3s;
+}
+
+#pipeline:hover #pipelineSkills{
+transform: translateX(0);
+
+
+}
+
+.spanSkill {
+  border: 3px ridge tomato;
+  padding: 3px;
+  margin-right: 20px;
+}
 
 /* ********************* Project Box ********************** */
 

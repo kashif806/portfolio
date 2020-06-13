@@ -40,7 +40,7 @@ $(document).ready(function(){
     });
 
     $("#contactBtn").hover((e)=>{
-        $(".socialIcons").css('transform','translateX(0)');
+        $(".socialIcons").css('transform','translateX(-3px)');
     },(e)=>{
         console.log("going back")
         $("#linkedin").css('transform','translateX(-90px)');
