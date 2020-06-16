@@ -34,9 +34,9 @@ $(document).ready(function(){
     );
     
     $("#tagLine").hover((e)=>{
-        $("#tagLine").text("A Front End Developer .... Moving towards full stack")
+        $("#tagLine").text("A Web Developer ... Front-End, Back-End, UX/UI")
     },(e)=>{
-        $("#tagLine").text("A Front End Developer ....");
+        $("#tagLine").text("A Web Developer ....");
     });
 
     $("#contactBtn").hover((e)=>{
