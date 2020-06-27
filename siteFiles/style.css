@@ -583,194 +583,152 @@ transform: translateX(0);
   margin-right: 20px;
 }
 
-/* ********************* Project Box ********************** */
+/* ********************************Project Section ************************* */
+
+.projectsContainer {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
 
 .projectBox {
-  width: 150px;
-  text-align: center;
-  height: 150px;
-  background-image:  linear-gradient(90deg, rgba(0,0,0,0.76234243697479) 0%, rgba(0,0,0,1) 50%, rgba(232,71,13,0.8300362381280637) 50%, rgba(232,152,13,0.8356384790244222) 100%);
-  z-index:1;
-  border-radius: 10%;
-  margin: 20px;
-  background-size: 200% 100%;
-  /* background-position: -100%; */
-  transition: all 1s;
-}
+  /* z-index:3; */
+  background-color: rgba(0,0,0,.8);
+  color: white;
+  width: 300px;
+  height:200px;
+  margin:5% 2%;
+  box-sizing: border-box;
+  border-radius: 10px;
+  flex-direction: row;
+  overflow: hidden;
+  /* border: 2px ridge white; */
+  }
 
-/* link for sliding background ...   */
-/* https://www.kirupa.com/html5/sliding_background_effect_on_link_hover.htm
- */
-
+/* #projectBox1{
+ border: 2px ridge blue;
+} */
 
 .projectBox:hover {
-
-  background-position: -100%;
-  color: black
-
+  z-index:3;
 }
 
-.projectDetails{
+.projectInner{
+  width: 600px;
+  height:200px;
+  flex-direction: row;
+  transition: all 1s ease-in-out;
+}
 
-  margin: auto;
-  background-size: 100% 200%;
-  transition: all 1s;
-  width:    70%;
-  min-height: 350px;
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%);
-  /* background-image: linear-gradient(0deg,rgba(232,71,13,0.8300362381280637) 0%, rgba(232,152,13,0.8356384790244222) 100%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%); */
-  margin : 1%;
-  border-radius: 5%;
-  padding: 1%;
- /* border : 2px ridge green; */
+.projectBox:hover .projectInner{
+  transform: translateX(-300px);
 }
 
 
-/* *********************Project 1 ************************/
+.projectTitle{
 
-#project1 {
-  border: 2px ridge blue;
-  transition: all 1s;
-  
-}
-#project1:hover {
-  border: 2px ridge black;
-  }
+  background-image: url(quizApp.png);
+  background-size: cover;
+  background-position: center;
+  height: 200px;
+  width:300px;
 
-#project1:hover ~ .projectDetails{
-  
-    background-position: -100% 100%;
-   border : 2px orange ridge;
- }
-  
-#show1 {
-  display: none;
 }
+
+.projectDetails {
  
-#project1:hover ~ .projectDetails #show1{
+  width:300px;
+  height:200px;
+  color: white;
+}
+
+.projectDetails h3 {
+  color: goldenrod;
+}
+
+.projectDetails h3 , .projectDetails h4, .projectDetails p {
+  /* color: white; */
+
+  margin:10px;
   
-   display: block;
-  
+}
+
+.projectDetails p {
+  text-align: center;
+}
+
+.projectButtons{
+  margin-top:10px;
+}
+
+.projectButtons a{
+  text-decoration: none;
+}
+
+.projectDetails button {
+  color: white;
+  width: 100px;
+  background-color: transparent;
+  font-weight: bolder;
+  border-color: white;
+  cursor: pointer;
+}
+
+.projectDetails button:hover {
+  border-color: goldenrod;
+  /* background-color: white; */
 }
 
 
 
-/* *********************Project 2 ************************/
 
-#project2 {
-  border: 2px ridge yellow;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.highlight {
+  color: rgb(255, 136, 0);
+  
 }
-#project2:hover {
-  border: 2px ridge black;
-  }  
-  
 
-#project2:hover {
-  border: 2px ridge black;
-  }
+#contactForm {
 
-#project2:hover ~ .projectDetails{
-  
-  background-position: -100% 100%;
-  border : 2px orange ridge;
- }
-  
-#show2 {
-  display: none;
-}
- 
-#project2:hover ~ .projectDetails #show2{
-  
-   display: block ;
-  
+  margin: 5%;
+
 }
 
-/* *********************Project 3 ************************/
-
-
-
-  
-#project3 {
-  border: 2px ridge blueviolet;
- }
-
- #project3:hover {
-  border: 2px ridge black;
-  }
-
-  #project3:hover {
-    border: 2px ridge black;
-    }
-  
-  #project3:hover ~ .projectDetails{
-    
-    background-position: -100% 100%;
-    border : 2px orange ridge;
-   }
-    
-  #show3 {
-    display: none;
-  }
-   
-  #project3:hover ~ .projectDetails #show3{
-    
-     display: block ;
-    
-  }  
- 
- /* *********************Project 3 ************************/ 
-
-
-#project4 {
-  border: 2px ridge red;
- }
-
- #project4:hover {
-  border: 2px ridge black;
-  }
-
-  
-  #project4:hover ~ .projectDetails{
-    
-    background-position: -100% 100%;
-    border : 2px orange ridge;
-   }
-    
-  #show4 {
-    display: none;
-  }
-   
-  #project4:hover ~ .projectDetails #show4{
-    
-     display: block ;
-    
-  }  
-
-
-
-  .projectBox button {
-    color: black;
-    font-weight: bolder;
-    border-color: black;
-  }
-  
-  .projectBox button:hover {
-    border-color: white;
-    background-color: white;
-  }
-  
-  
-  .highlight {
-    color: rgb(255, 136, 0);
-   
-  }
-
-  #contactForm {
-
-    /* background-color: black; */
-    margin: 5%;
-
-  }
 
   #formElements {
     margin :  5%;
@@ -836,3 +794,201 @@ transform: translateX(0);
   
 
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+/* ********************* Project Box ********************** */
+/* 
+.projectsContainer{
+  width:60%;
+  background-color: white;
+  flex-direction: row;
+
+}
+
+.projectBox {
+  width: 200px;
+  text-align: center;
+  height: 300px;
+  background-image:  linear-gradient(90deg, rgba(0,0,0,0.76234243697479) 0%, rgba(0,0,0,1) 50%, rgba(232,71,13,0.8300362381280637) 50%, rgba(232,152,13,0.8356384790244222) 100%);
+  z-index:1;
+  border-radius: 10%;
+  margin: 20px;
+  background-size: 200% 100%;
+  /* background-position: -100%; */
+  /* transition: all 1s;
+} */ */
+
+/* link for sliding background ...   */
+/* https://www.kirupa.com/html5/sliding_background_effect_on_link_hover.htm
+ */
+/* 
+
+.projectBox:hover {
+
+  background-position: -100%;
+  color: black
+
+}
+
+.projectDetails{
+
+  margin: auto;
+  background-size: 100% 200%;
+  transition: all 1s;
+  width:    70%;
+  min-height: 350px;
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%); */
+  /* background-image: linear-gradient(0deg,rgba(232,71,13,0.8300362381280637) 0%, rgba(232,152,13,0.8356384790244222) 100%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%); */
+  /* margin : 1%;
+  border-radius: 5%;
+  padding: 1%; */
+ /* border : 2px ridge green; */
+/* } */
+
+
+/* *********************Project 1 ************************/
+
+/* #project1 {
+  border: 2px ridge blue;
+  transition: all 1s;
+  
+}
+#project1:hover {
+  border: 2px ridge black;
+  }
+
+#project1:hover ~ .projectDetails{
+  
+    background-position: -100% 100%;
+   border : 2px orange ridge;
+ }
+  
+#show1 {
+  display: none;
+}
+ 
+#project1:hover ~ .projectDetails #show1{
+  
+   display: block;
+  
+} */
+
+
+
+/* *********************Project 2 ************************/
+
+/* #project2 {
+  border: 2px ridge yellow;
+}
+#project2:hover {
+  border: 2px ridge black;
+  }  
+  
+
+#project2:hover {
+  border: 2px ridge black;
+  }
+
+#project2:hover ~ .projectDetails{
+  
+  background-position: -100% 100%;
+  border : 2px orange ridge;
+ }
+  
+#show2 {
+  display: none;
+}
+ 
+#project2:hover ~ .projectDetails #show2{
+  
+   display: block ;
+  
+} */
+
+/* *********************Project 3 ************************/
+
+
+
+  
+/* #project3 {
+  border: 2px ridge blueviolet;
+ }
+
+ #project3:hover {
+  border: 2px ridge black;
+  }
+
+  #project3:hover {
+    border: 2px ridge black;
+    }
+  
+  #project3:hover ~ .projectDetails{
+    
+    background-position: -100% 100%;
+    border : 2px orange ridge;
+   }
+    
+  #show3 {
+    display: none;
+  }
+   
+  #project3:hover ~ .projectDetails #show3{
+    
+     display: block ;
+    
+  }   */
+ 
+ /* *********************Project 3 ************************/ 
+
+/* 
+#project4 {
+  border: 2px ridge red;
+ }
+
+ #project4:hover {
+  border: 2px ridge black;
+  }
+
+  
+  #project4:hover ~ .projectDetails{
+    
+    background-position: -100% 100%;
+    border : 2px orange ridge;
+   }
+    
+  #show4 {
+    display: none;
+  }
+   
+  #project4:hover ~ .projectDetails #show4{
+    
+     display: block ;
+    
+  }  
+
+
+
+  .projectBox button {
+    color: black;
+    font-weight: bolder;
+    border-color: black;
+  }
+  
+  .projectBox button:hover {
+    border-color: white;
+    background-color: white;
+  }
+   */
