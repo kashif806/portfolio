@@ -3,22 +3,25 @@ let overlay = document.getElementsByClassName("overlay")[0];
 let name = document.querySelector("#nameDiv h1");
 let infoModalClose = document.getElementById("infoModalClose");
 let infoModal = document.getElementById("infoModal");
-const colors = ["red","yellow","green","orange","purple","blue"]
-
-let randomColour = () => {
-    let rand = Math.floor(Math.random() * (5 - 0 + 1)) + 0;
-    let borderColor = colors[rand];
-    return borderColor;
-}
-
-for (let index = 0; index < 15; index++) {
-    console.log(randomColour());
-    
-}
-console.log (randomColour());
 
 AOS.init ();
 
+
+let mq= window.matchMedia("(max-width: 900px)");
+
+mediaChange = (mq) => {
+    var elements =  document.querySelectorAll(".addAOS");
+    if(mq.matches) {
+        elements.forEach(element => {
+            element.removeAttribute("data-aos", "data-aos-anchor-placement", "data-aos-duration" )
+            console.log("AOS removed");
+        });
+        
+    }
+}   
+
+mq.addListener(mediaChange);
+mediaChange(mq);
 
 
 $(document).ready(function(){
