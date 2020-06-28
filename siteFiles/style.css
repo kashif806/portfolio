@@ -135,7 +135,7 @@ video {
 
     }
 
-    button {
+    #buttonContainer button {
         
         background: none;
         color: whitesmoke;      
@@ -591,22 +591,23 @@ transform: translateX(0);
 }
 
 .projectBox {
-  /* z-index:3; */
-  background-color: rgba(0,0,0,.8);
   color: white;
   width: 300px;
   height:200px;
-  margin:5% 2%;
+  margin:5% 1% 2% 1%;
   box-sizing: border-box;
   border-radius: 10px;
   flex-direction: row;
   overflow: hidden;
-  /* border: 2px ridge white; */
+  border: 2px ridge white;
+  transition: all 2s;
   }
 
-/* #projectBox1{
- border: 2px ridge blue;
-} */
+.projectBox:hover {
+  border: 2px ridge coral;
+
+}
+
 
 .projectBox:hover {
   z-index:3;
@@ -623,10 +624,8 @@ transform: translateX(0);
   transform: translateX(-300px);
 }
 
-
 .projectTitle{
 
-  background-image: url(quizApp.png);
   background-size: cover;
   background-position: center;
   height: 200px;
@@ -634,15 +633,27 @@ transform: translateX(0);
 
 }
 
+.projectTitle h3{
+  color: whitesmoke;
+  font-weight: bolder;
+  background: rgba(14, 128, 163, 0.8);
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  border-radius: 10px;;
+
+}
+
 .projectDetails {
  
+  background-color: rgba(0,0,0,.5);
   width:300px;
   height:200px;
-  color: white;
+  color: whitesmoke;
+  font-weight: bold;
 }
 
 .projectDetails h3 {
-  color: goldenrod;
+  font-weight: bolder;
 }
 
 .projectDetails h3 , .projectDetails h4, .projectDetails p {
@@ -665,7 +676,7 @@ transform: translateX(0);
 }
 
 .projectDetails button {
-  color: white;
+  color: whitesmoke;
   width: 100px;
   background-color: transparent;
   font-weight: bolder;
@@ -674,8 +685,7 @@ transform: translateX(0);
 }
 
 .projectDetails button:hover {
-  border-color: goldenrod;
-  /* background-color: white; */
+  border-color: coral;
 }
 
 
