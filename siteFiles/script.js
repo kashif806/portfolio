@@ -45,10 +45,18 @@ $(document).ready(function(){
     $("#contactBtn").hover((e)=>{
         $(".socialIcons").css('transform','translateX(-3px)');
     },(e)=>{
-        console.log("going back")
         $("#linkedin").css('transform','translateX(-90px)');
         $("#email").css('transform','translateX(-200px)');
         $("#call").css('transform','translateX(-160px)');
+
+    });
+
+    $("#infoBtn").hover((e)=>{
+        $(".navIcons").css('transform','translateX(3px)');
+    },(e)=>{
+        $("#skillsIcon").css('transform','translateX(80px)');
+        $("#projectsIcon").css('transform','translateX(100px)');
+        $("#contactFormIcon").css('transform','translateX(140px)');
 
     });
 

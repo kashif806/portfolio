@@ -6,6 +6,12 @@ body, html {
 
 }
 
+body a {
+  text-decoration: none;
+  color: inherit;
+  
+}
+
 video {
     position: fixed;
     width: 100%;
@@ -29,11 +35,19 @@ video {
     z-index:1;
   }
 
-  #social:hover {
+  #nav {
+    position: fixed;
+    top: 40%;
+    right: 0;
+    z-index:1;
+    /* float: right; */
+  }
+
+  #social:hover, #nav:hover {
     z-index:3;
   }
   
-  .socialIcons {
+  .socialIcons, .navIcons {
     /* background-color: blue; */
     background-color: transparent;
     padding: 10px 5px;
@@ -53,15 +67,19 @@ video {
    /* float: right; */    
   }
 
+  #nav svg {
+    fill:white !important;
+  }
+
   #linkedin{
     /* background-color: blue; */
     width: 130px;
     transform: translateX(-90px);
-    color: white;
     border: 2px solid blue;
   }
 
-  #email{
+  
+  #email {
     width: 240px;
     /* background-color: tomato; */
     transform: translateX(-200px);
@@ -84,6 +102,41 @@ video {
     /* color: black; */
     font-weight: bold;
   }
+
+  .navIcons:hover{
+    background-color: black !important;
+    transform: translateX(0) !important;
+    /* color: black; */
+    font-weight: bold;
+  }
+
+
+  #skillsIcon {
+    float: right !important;
+    width: 120px;
+    transform: translateX(80px);
+    border: 2px solid blue;
+  }
+
+  #projectsIcon {
+    float: right !important;
+    width: 140px;
+    transform: translateX(100px);
+    border: 2px solid tomato;
+    }
+
+  #contactFormIcon{
+    float: right !important;
+    width: 180px;
+    /* background-color: goldenrod; */
+    transform: translateX(140px);
+    border: 2px solid goldenrod;
+    
+
+  }
+
+
+
 
 
 
