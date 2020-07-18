@@ -56,8 +56,39 @@ $(document).ready(function(){
     },(e)=>{
         $("#skillsIcon").css('transform','translateX(80px)');
         $("#projectsIcon").css('transform','translateX(100px)');
-        $("#contactFormIcon").css('transform','translateX(140px)');
+        $("#contactFormIcon").css('transform','translateX(180px)');
 
     });
+
+    $( "#infoBtn" ).click((e)=> {
+        $('html,body').animate({scrollTop: window.innerHeight}, 2000);
+    });
+
+    $("#contactBtn").click((e)=>{
+        console.log($('#contactFormSection').offset().top);
+        $('html,body').animate({scrollTop: ($('#contactFormSection').offset().top)}, 2000);
+    })
+
+    $(".menuItem").click((e)=>{
+        $("#menuOverlayInput").prop('checked', false);
+    });
+
+    $(window).scroll((e)=>{
+        if (($(window).scrollTop()) !== 0 ) {
+            $("nav").css('visibility','visible');
+        }
+        else {
+            $("nav").css('visibility','hidden');
+        }
+        
+    });
+    
+
+    
+
+    // $("#menuButton").click((e) => {
+    //     $("#mobileMenu").toggle();
+
+    // });
 
 });

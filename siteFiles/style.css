@@ -3,13 +3,11 @@ body, html {
     padding : 0;
     color: whitesmoke;      
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-
 }
 
 body a {
   text-decoration: none;
   color: inherit;
-  
 }
 
 video {
@@ -127,9 +125,9 @@ video {
 
   #contactFormIcon{
     float: right !important;
-    width: 180px;
+    width: 220px;
     /* background-color: goldenrod; */
-    transform: translateX(140px);
+    transform: translateX(180px);
     border: 2px solid goldenrod;
     
 
@@ -687,13 +685,10 @@ transform: translateX(0);
 }
 
 .projectTitle h3{
-  color: whitesmoke;
+  color: white;
   font-weight: bolder;
-  background: rgba(14, 128, 163, 0.8);
   background: rgba(0, 0, 0, 0.8);
   padding: 10px;
-  border-radius: 10px;;
-
 }
 
 .projectDetails {
@@ -710,10 +705,7 @@ transform: translateX(0);
 }
 
 .projectDetails h3 , .projectDetails h4, .projectDetails p {
-  /* color: white; */
-
   margin:10px;
-  
 }
 
 .projectDetails p {
@@ -742,44 +734,7 @@ transform: translateX(0);
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/* *****************************COntact Form ************************/
 
 .highlight {
   color: rgb(255, 136, 0);
@@ -858,200 +813,202 @@ transform: translateX(0);
 
   
 
+/* ***********************Responsive to sscreen******************** */
 
-
-
-
-
-
-
-
-
-
-
-
-
+@media screen and (max-width : 979px) {
   
-/* ********************* Project Box ********************** */
-/* 
-.projectsContainer{
-  width:60%;
-  background-color: white;
+  .bigScreenOnly {
+    
+    display :none
+  
+  }
+
+  .smallScreenOnly {
+    display: flex !important;
+  }
+
+}
+
+nav {
+  display: none;
+  visibility: hidden;
+  position: fixed;
+  width: 100vw;
+  height: 50px;
+  left:0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* background-color: grey; */
+  z-index: 7;
+  /* display: flex; */
+  justify-content: space-evenly;
+  align-items: center;
   flex-direction: row;
-
+  /* border-top: 2px solid white;
+  border-bottom: 5px ridge white; */
 }
 
-.projectBox {
-  width: 200px;
+.navItem {
+  margin-left: 1em;
+}
+
+.navItem svg {
+  align-self: center;
+  width: 35px;
+  height: 35px;
+}
+
+#navLinkedIn {
+  color: rgb(6, 101, 255);
+  /* background-color: white; */
+}
+
+#navEmail {
+  color: tomato;
+}
+
+#navPhone {
+  color: rgb(255, 255, 0);
+ 
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: black;
+  color: #fff;
   text-align: center;
-  height: 300px;
-  background-image:  linear-gradient(90deg, rgba(0,0,0,0.76234243697479) 0%, rgba(0,0,0,1) 50%, rgba(232,71,13,0.8300362381280637) 50%, rgba(232,152,13,0.8356384790244222) 100%);
-  z-index:1;
-  border-radius: 10%;
-  margin: 20px;
-  background-size: 200% 100%;
-  /* background-position: -100%; */
-  /* transition: all 1s;
-} */ */
+  border-radius: 6px;
+  padding: 5px 0;
 
-/* link for sliding background ...   */
-/* https://www.kirupa.com/html5/sliding_background_effect_on_link_hover.htm
- */
-/* 
+  /* Position the tooltip */
+  position: absolute;
+  transform: translate(-130px , -40px);
+   z-index: 1;
+}
 
-.projectBox:hover {
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: red transparent transparent transparent;
+}
 
-  background-position: -100%;
-  color: black
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+#menuButton {
+
+  display:none;
+  position: fixed;
+  right: 0.5em;
+  top: 0.5em;
+  padding: 26px 11px;
+  z-index: 7;
+  cursor: pointer;
+  user-select: none;
+}
+
+#menuButton span , #menuButton span:before, #menuButton span:after  {
+  height: 4px;
+  width: 35px;
+  border-radius: 2px;
+  background-color: white;
+  position: relative;
+  display: block;
+  transition: all .2s ease-in-out;
+  /* margin: 5px; */
+}
+
+#menuButton span:before {
+  content: "";
+  top: -15px;
 
 }
 
-.projectDetails{
+#menuButton span:after {
+  content: "";
+  top: 10px;
 
-  margin: auto;
-  background-size: 100% 200%;
-  transition: all 1s;
-  width:    70%;
-  min-height: 350px;
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%); */
-  /* background-image: linear-gradient(0deg,rgba(232,71,13,0.8300362381280637) 0%, rgba(232,152,13,0.8356384790244222) 100%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 100%); */
-  /* margin : 1%;
-  border-radius: 5%;
-  padding: 1%; */
- /* border : 2px ridge green; */
-/* } */
-
-
-/* *********************Project 1 ************************/
-
-/* #project1 {
-  border: 2px ridge blue;
-  transition: all 1s;
-  
 }
-#project1:hover {
-  border: 2px ridge black;
-  }
 
-#project1:hover ~ .projectDetails{
-  
-    background-position: -100% 100%;
-   border : 2px orange ridge;
- }
-  
-#show1 {
+#mobileMenu {
+  position: fixed;
+  z-index: 6;
+  height: 100vh;
+  width: 100vw;
+  /* color: tomato; */
+  color: whitesmoke;
+  font-weight: bold;
+  background-color: black;
+  display: none;
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+}
+
+#mobileMenu ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#mobileMenu li{
+  list-style-type: none;
+  text-decoration: none;
+  margin: 15px;
+  font-size: 1.5rem;
+}
+
+input[type=checkbox] {
   display: none;
 }
+
+input[type=checkbox]:checked ~ #mobileMenu {
+  display: flex;
+}
+
+input[type=checkbox]:checked ~ #menuButton span {
+
+  background: transparent;
+
+}
+
+input[type=checkbox]:checked ~ #menuButton span:before {
  
-#project1:hover ~ .projectDetails #show1{
-  
-   display: block;
-  
+  transform: rotate(45deg) translate(7px, 12px);
+  opacity: 1;
+  width:45px;
+  background-color: tomato;
+}
+
+input[type=checkbox]:checked ~ #menuButton span:after {
+ 
+  transform: rotate(-45deg) translate(7px, -12px);
+  opacity: 1;
+  width:45px;
+  background-color: tomato;
+
+
+}
+/* #menuButton span::before{
+  top: -10px;
+  visibility: visible;
 } */
 
 
 
-/* *********************Project 2 ************************/
-
-/* #project2 {
-  border: 2px ridge yellow;
-}
-#project2:hover {
-  border: 2px ridge black;
-  }  
-  
-
-#project2:hover {
-  border: 2px ridge black;
-  }
-
-#project2:hover ~ .projectDetails{
-  
-  background-position: -100% 100%;
-  border : 2px orange ridge;
- }
-  
-#show2 {
-  display: none;
-}
- 
-#project2:hover ~ .projectDetails #show2{
-  
-   display: block ;
-  
-} */
-
-/* *********************Project 3 ************************/
 
 
-
-  
-/* #project3 {
-  border: 2px ridge blueviolet;
- }
-
- #project3:hover {
-  border: 2px ridge black;
-  }
-
-  #project3:hover {
-    border: 2px ridge black;
-    }
-  
-  #project3:hover ~ .projectDetails{
-    
-    background-position: -100% 100%;
-    border : 2px orange ridge;
-   }
-    
-  #show3 {
-    display: none;
-  }
-   
-  #project3:hover ~ .projectDetails #show3{
-    
-     display: block ;
-    
-  }   */
- 
- /* *********************Project 3 ************************/ 
-
-/* 
-#project4 {
-  border: 2px ridge red;
- }
-
- #project4:hover {
-  border: 2px ridge black;
-  }
-
-  
-  #project4:hover ~ .projectDetails{
-    
-    background-position: -100% 100%;
-    border : 2px orange ridge;
-   }
-    
-  #show4 {
-    display: none;
-  }
-   
-  #project4:hover ~ .projectDetails #show4{
-    
-     display: block ;
-    
-  }  
-
-
-
-  .projectBox button {
-    color: black;
-    font-weight: bolder;
-    border-color: black;
-  }
-  
-  .projectBox button:hover {
-    border-color: white;
-    background-color: white;
-  }
-   */
